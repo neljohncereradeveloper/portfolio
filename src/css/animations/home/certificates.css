@@ -1,0 +1,25 @@
+/* animations */
+.certificates-section {
+  /* certificate title */
+  & .certificate-title {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  & .certificate {
+    opacity: 0;
+  }
+
+  /* certificate title animation */
+  & .certificate-title--animate {
+    animation: animate-scale 1.2s linear 200ms forwards,
+      animate-opacity-one 1.2s linear 200ms forwards;
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  & .certificate--animate {
+    animation: animate-opacity-one 1.2s linear 800ms forwards;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,40 @@
+.btn-scrollup {
+  background-color: var(--bg-dark-green);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 0.5em;
+  z-index: 10;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 5px var(--bg-light-green);
+  transition: 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--bg-light-green);
+    box-shadow: 0 0 2px 5px var(--bg-dark-green);
+  }
+
+  & .btn-scrollup__icon {
+    width: 30px;
+    height: 30px;
+    color: var(--text-white);
+  }
+}
+
+/* animations */
+.btn-scrollup--animate {
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: animateScrollUp 500ms linear forwards;
+  transform: scale(0);
+}
+
+@keyframes animateScrollUp {
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

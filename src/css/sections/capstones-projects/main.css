@@ -1,0 +1,158 @@
+.projectsWrapper > .container {
+  padding: 0;
+  @media (--tablet) {
+    padding-block: 3rem;
+  }
+
+  /* aside */
+  & .aside {
+    grid-area: aside;
+    border-bottom: 1px solid var(--bg-light-green);
+    @media (--tablet-md) {
+      border-left: 1px solid var(--bg-light-green);
+      border-bottom: none;
+    }
+
+    /* aside navigation */
+    & .projectsNavigation {
+      /* aside navigation list */
+      & .projectsNavigation__list {
+        @media (--tablet-md) {
+          padding: 0.5em 1em;
+        }
+
+        /* aside navigation list item */
+        & .projectsNavigation__listItem {
+          letter-spacing: 1px;
+
+          /* aside navigation list item capstones list item */
+          /* aside navigation list item frontendmentor list item */
+          & .projectsNavigation__listItem__capstones-listItem,
+          & .projectsNavigation__listItem__frontendmentor-listItem {
+            margin-left: 2rem;
+
+            & > * {
+              color: var(--bg-brown);
+            }
+
+            & :hover {
+              transition: all 200ms ease-in-out;
+              color: blue;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* capstones projects title */
+  & .capstonesProjects-title {
+    line-height: var(--line-height);
+    text-align: left;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  /* capstones projects */
+  & .capstonesProjects {
+    /* capstones project content */
+    & .project__content {
+      & .project__img {
+        width: 100%;
+        height: 200px;
+        opacity: 0.8;
+        & span > img {
+          object-fit: cover;
+        }
+
+        @media (--laptop) {
+          height: 300px;
+        }
+      }
+
+      /* capstones project content subtitle */
+      & .subtitle-section {
+        text-align: left;
+        line-height: 1.2;
+      }
+
+      /* capstones project link */
+      & .project__link {
+        width: max-content;
+        color: rgba(78, 78, 248, 0.5);
+        display: flex;
+        flex-direction: row;
+        gap: 0.5em;
+        text-transform: uppercase;
+
+        &:hover {
+          color: rgba(7, 7, 243, 1);
+        }
+
+        /* capstones project link icon */
+        & .project__link-icon {
+          color: white;
+          height: 18px;
+          width: 18px;
+        }
+      }
+
+      /* capstones projects content technologies */
+      & .project__technologies {
+        & .project__technologies-name {
+          display: inline-block;
+          color: var(--text-white);
+          font-size: var(--fs-sm);
+          font-weight: var(--fw-semibold);
+          background-color: var(--bg-light-green);
+          border-radius: 10px;
+          padding-block: 0.3em;
+          padding-inline: 1em;
+          white-space: pre-wrap;
+        }
+      }
+    }
+  }
+
+  /* frontend mentors title */
+  & .frontentMentors-title {
+    line-height: var(--line-height);
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  /* frontend mentors */
+  & .frontentMentors {
+    & .frontentMentor_project {
+      border-radius: 10px;
+      text-align: center;
+
+      & .bg-blur {
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+
+      /* frontend mentors project title */
+      & .frontentMentor_project-title {
+        color: white;
+      }
+
+      /* frontend mentors project link */
+      & .frontentMentor_project-link {
+        color: rgb(4, 4, 255);
+        font-size: var(--fs-md);
+        font-weight: var(--fw-bold);
+        text-transform: uppercase;
+
+        &:hover {
+          color: rgba(4, 4, 255, 0.5);
+        }
+
+        /* frontend mentors project link icon */
+        & .frontentMentor_project-link-icon {
+          color: rgb(4, 4, 255);
+        }
+      }
+    }
+  }
+}

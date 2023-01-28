@@ -1,0 +1,194 @@
+.projectsWrapper > .container {
+  margin-bottom: 2em;
+  --gap: 1rem;
+  --line-height: 1.1;
+  --margin-bottom: 1rem;
+
+  display: grid;
+  grid-template-areas:
+    "aside"
+    "projects-title"
+    "projects"
+    "frontentmentors-title"
+    "frontentmentors";
+  grid-template-rows: auto auto 1fr auto auto;
+  @media (--tablet-md) {
+    grid-template-areas:
+      "projects-title aside"
+      "projects aside"
+      "frontentmentors-title frontentmentors-title"
+      "frontentmentors frontentmentors";
+    grid-template-columns: 1fr 250px;
+    grid-template-rows: none;
+    column-gap: 1em;
+  }
+  @media (--laptop) {
+    grid-template-columns: 1fr 300px;
+    column-gap: 1.5em;
+  }
+
+  /* aside */
+  & .aside {
+    grid-area: aside;
+    padding-block: 0.5em;
+    margin-bottom: 1em;
+    /* @media (--tablet) {
+      height: 25%;
+    }
+
+    @media (--laptop) {
+      height: 20%;
+    } */
+
+    /* aside navigation */
+    & .projectsNavigation {
+      width: 100%;
+      height: 100%;
+      /* aside navigation list */
+      & .projectsNavigation__list {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1em;
+        @media (--tablet-md) {
+          justify-content: flex-start;
+          align-items: center;
+          flex-direction: column;
+        }
+
+        /* aside navigation list item */
+        & .projectsNavigation__listItem {
+          @media (--tablet-md) {
+            width: 100%;
+          }
+        }
+
+        /* aside navigation list item capstones list */
+        /* aside navigation list item frontendmentor list */
+        & .projectsNavigation__listItem__capstones-list,
+        & .projectsNavigation__listItem__frontendmentor-list {
+          display: none;
+          @media (--tablet-md) {
+            margin-top: 0.4em;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+          }
+        }
+      }
+    }
+  }
+
+  /* capstones projects title */
+  & .capstonesProjects-title {
+    grid-area: projects-title;
+  }
+
+  /* capstones projects */
+  & .capstonesProjects {
+    grid-area: projects;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+
+    /* capstones projects content */
+    & .project__content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
+      margin-bottom: var(--margin-bottom);
+
+      & .project__link-container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* capstones projects content technologies */
+      & .project__technologies {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5em;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  /* frontend mentors title */
+  & .frontentMentors-title {
+    grid-area: frontentmentors-title;
+  }
+
+  /* frontend mentors */
+  & .frontentMentors {
+    grid-area: frontentmentors;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    flex-wrap: wrap;
+
+    /* frontend mentors project */
+    & .frontentMentor_project {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-inline: 1.5em;
+      overflow: hidden;
+
+      @media (--tablet) {
+        width: 250px;
+      }
+
+      @media (--laptop) {
+        width: 300px;
+      }
+
+      /* frontend mentors bg blur */
+      & .bg-blur {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+      }
+
+      /* frontend mentors project img */
+      & .frontentMentor_project-img {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+
+        & span > img {
+          object-fit: cover;
+        }
+      }
+
+      /* frontend mentors project title */
+      & .frontentMentor_project-title {
+        display: inline-block;
+        z-index: 2;
+      }
+
+      /* frontend mentors project link */
+      & .frontentMentor_project-link {
+        width: max-content;
+        display: flex;
+        flex-direction: row;
+        gap: 0.5em;
+        z-index: 2;
+
+        /* frontend mentors project link icon */
+        & .frontentMentor_project-link-icon {
+          height: 25px;
+          width: 25px;
+        }
+      }
+    }
+  }
+}

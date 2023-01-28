@@ -1,0 +1,47 @@
+.whatido-section {
+  /* whatido title */
+  & .whatido-title {
+    margin-bottom: 1em;
+    @media (--laptop) {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  /* whatido list */
+  & .whatido__list {
+    width: 100%;
+    margin-bottom: 3em;
+    z-index: 2;
+
+    /* whatido item */
+    & .whatido__item {
+      width: 250px;
+      height: 180px;
+      background-color: var(--bg-light-green);
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px 1px var(--bg-brown);
+
+      @media (--laptop) {
+        width: 180px;
+        height: 180px;
+      }
+
+      /* whatido item icon */
+      & .whatido__item-icon {
+        height: 80px;
+        width: 120px;
+        fill: var(--bg-brown);
+        margin-bottom: 0.5em;
+      }
+
+      /* whatido item detail */
+      & .whatido__item-detail {
+        color: var(--text-white);
+        font-size: var(--fs-base);
+        font-weight: var(--fw-semibold);
+        letter-spacing: 0.8px;
+        /* opacity: 0.5; */
+      }
+    }
+  }
+}

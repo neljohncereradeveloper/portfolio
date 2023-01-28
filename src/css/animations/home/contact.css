@@ -1,0 +1,28 @@
+/* animations */
+.contact-section {
+  /* contact details title */
+  & .contact-details__titlee {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  & .contact-details__key {
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+
+  /* contact title animation */
+  & .contact-details__title--animate {
+    animation: animate-scale 1.2s linear 200ms forwards,
+      animate-opacity-one 1.2s linear 200ms forwards;
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  & .contact-details__key--animate {
+    animation: animate-left-to-right 1s linear 1s forwards,
+      animate-opacity-one 1s linear 1s forwards;
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+}

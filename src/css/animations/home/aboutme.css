@@ -1,0 +1,53 @@
+/*  animations */
+.aboutme-section {
+  --animation-delay: 1s;
+  @media (--desktop) {
+    --animation-delay: 200ms;
+  }
+
+  /* title default */
+  & .aboutme-title {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  /* img__container default */
+  & .aboutme-img__container {
+    transform: scale(0);
+    opacity: 0;
+  }
+  /* details default */
+  & .aboutme-details {
+    transform: translateY(100%) scale(0);
+    opacity: 0;
+  }
+
+  /* animate aboutme title */
+  & .aboutme-title--animate {
+    animation: animate-left-to-right 1s linear var(--animation-delay) forwards,
+      animate-opacity-one 1s linear var(--animation-delay) forwards;
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  /* animate aboutme image */
+  & .aboutme-img__container--animate {
+    animation: animate-scale 1s linear var(--animation-delay) forwards,
+      animate-opacity-point-one 1s linear var(--animation-delay) forwards;
+    transform: scale(0);
+    opacity: 0;
+
+    @media (--laptop) {
+      animation: animate-scale 1s linear var(--animation-delay) forwards,
+        animate-opacity-one 1s linear var(--animation-delay) forwards;
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+  /* animate aboutme details */
+  & .aboutme-details--animate {
+    animation: animate-bottom-to-top 1s linear var(--animation-delay) forwards,
+      animate-scale 1s linear var(--animation-delay) forwards,
+      animate-opacity-point-seven 1s linear var(--animation-delay) forwards;
+    transform: translateY(100%) scale(0);
+    opacity: 0;
+  }
+}

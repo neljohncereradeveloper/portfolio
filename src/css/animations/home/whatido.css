@@ -1,0 +1,33 @@
+/* animations */
+.whatido-section {
+  /* whatido title default */
+  & .whatido-title {
+    transform: scale(0);
+    opacity: 0;
+  }
+  /* whatido title default */
+  & .whatido__item {
+    opacity: 0;
+  }
+  /* what i do title animation */
+  & .whatido-title--animate {
+    animation: animate-scale 1.2s linear 200ms forwards,
+      animate-opacity-one 1.2s linear 200ms forwards;
+    transform: scale(0);
+    opacity: 0;
+  }
+  /* what i do list item animation left */
+  & .whatido__item--animate-left {
+    animation: animate-left-to-right 1s linear 1s forwards,
+      animate-opacity-one 1s linear 1s forwards;
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+  /* what i do list item animation right */
+  & .whatido__item--animate-right {
+    animation: animate-right-to-left 1s linear 1s forwards,
+      animate-opacity-one 1s linear 1s forwards;
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,29 @@
+.whatido-section > * {
+  /* main */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* whatido list */
+  & .whatido__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+
+    @media (--mobile-lg) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    /* whatido item */
+    & .whatido__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

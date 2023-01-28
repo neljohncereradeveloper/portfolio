@@ -1,0 +1,40 @@
+.hero-section > * {
+  /* Main */
+  display: flex;
+  flex-direction: column;
+  @media (--mobile-lg) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* hero details */
+  & .hero-section__details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+  }
+
+  /* hero socials */
+  & .hero-section__socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5em;
+
+    @media (--mobile-lg) {
+      flex-direction: column;
+    }
+
+    /* social icons */
+    & .hero-social__icons {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5em;
+
+      @media (--mobile-lg) {
+        flex-direction: column;
+      }
+    }
+  }
+}

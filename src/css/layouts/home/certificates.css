@@ -1,0 +1,108 @@
+/* z-index certificate-buttons = 1 */
+/* z-index certificate-animation = 2 */
+/* z-index certificate-animation__btn-open = 5 */
+
+.certificates-section > .container {
+  display: grid;
+  grid-template-areas:
+    "certificate-title certificate-title"
+    "certificate-one certificate-one"
+    "certificate-two certificate-two"
+    "certificate-three certificate-three";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 270px 270px 270px;
+  row-gap: 2em;
+
+  @media (--laptop) {
+    grid-template-areas:
+      "certificate-title certificate-title"
+      "certificate-two certificate-one"
+      "certificate-two certificate-three";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 270px 270px;
+    gap: 2em;
+  }
+
+  /* certificate */
+  & .certificate {
+    position: relative;
+
+    /* certificate animations */
+    & .certificate-animation {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+
+      /* certificate animation button open */
+      & .certificate-animation__btn-open {
+        z-index: 5;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      /* certificate animation left container */
+      & .certificate-animation__left {
+        position: absolute;
+        inset-block: 0;
+        left: 0;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+      }
+
+      /* certificate animation right container */
+      & .certificate-animation__right {
+        position: absolute;
+        inset-block: 0;
+        right: 0;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        & .certificate-animation__right-certified {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+    }
+
+    /* certificate buttons */
+    & .certificate-buttons {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1em;
+    }
+  }
+
+  /* grid certificate-title */
+  & .certificate-title {
+    grid-area: certificate-title;
+  }
+
+  /* grid certificate-one */
+  & .certificate-one {
+    grid-area: certificate-one;
+  }
+
+  /* grid certificate-two */
+  & .certificate-two {
+    grid-area: certificate-two;
+    /* overflow-y: hidden; */
+  }
+
+  /* grid certificate-three */
+  & .certificate-three {
+    grid-area: certificate-three;
+  }
+}

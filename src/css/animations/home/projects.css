@@ -1,0 +1,16 @@
+/* animations */
+
+.project-section {
+  overflow: hidden;
+  opacity: 0;
+}
+
+.project-section--animate {
+  --duration: 1.5s;
+  --delay: 200ms;
+
+  animation: animate-bottom-to-top var(--duration) linear var(--delay) forwards,
+    animate-opacity-one var(--duration) linear var(--delay) forwards;
+  transform: translateY(100%);
+  opacity: 0;
+}

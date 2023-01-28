@@ -1,0 +1,47 @@
+/* text color */
+.text-primary {
+  color: var(--text-primary);
+}
+.text-secondary {
+  color: var(--text-secondary);
+}
+.text-base {
+  color: var(--text-base);
+}
+/* font sizes */
+.fs-base {
+  font-size: clamp(var(--fs-base), 1.25vw, 1.25rem);
+}
+.fs-md {
+  font-size: clamp(var(--fs-md), 2.25vw, 2.25rem);
+}
+.fs-lg {
+  font-size: clamp(var(--fs-lg), 3.25vw, 3.25rem);
+}
+/* font weight */
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+.fw-base {
+  font-weight: var(--fw-base);
+}
+/* text alignment */
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+/* text decoration */
+.decoration-none {
+  text-decoration: none;
+}
+.text-underline {
+  text-decoration: underline;
+}
+.text-line-through {
+  text-decoration: line-through;
+}

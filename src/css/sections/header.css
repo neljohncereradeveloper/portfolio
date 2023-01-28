@@ -1,0 +1,196 @@
+.header {
+  background-color: var(--bg-dark-green);
+  height: 75px;
+  max-width: 1100px;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.5em;
+  @media (--mobile-lg) {
+    padding-inline: 2em;
+  }
+  @media (--tablet) {
+    padding-inline: 2.5em;
+  }
+  @media (--desktop) {
+    padding-inline: 0;
+  }
+
+  & /* header button logo */
+  .header-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  & /* header button menu */
+  .btn-menu {
+    order: 2;
+    font-size: var(--fs-base);
+    padding: 5px;
+    background-color: var(--bg-dark-green);
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 5px 10px var(--bg-light-green);
+    }
+
+    /* header button menu icon */
+    & .btn-menu__icon {
+      height: 25px;
+      width: 25px;
+      color: var(--text-white);
+    }
+  }
+
+  /* header navigation  */
+  & .header-navigation {
+    /* header navigation list */
+    & .header-navigation__list {
+      background-color: var(--bg-light-green);
+
+      @media (--tablet) {
+        background-color: transparent;
+      }
+
+      & .header-navigation__item-download {
+        transition: all 300ms ease-in-out;
+        padding: 1rem 1.3rem;
+        @media (--mobile-lg) {
+          padding: 1rem 2em;
+        }
+        @media (--tablet) {
+          padding: 0;
+        }
+        &:hover {
+          cursor: pointer;
+          background-color: var(--bg-brown);
+        }
+      }
+
+      & .header-navigation__item {
+        transition: all 300ms ease-in-out;
+        & a {
+          position: relative;
+          padding: 1rem 1.3rem;
+          display: flex;
+          width: 100%;
+          &:hover {
+            background-color: var(--bg-brown);
+            cursor: pointer;
+          }
+          @media (--mobile-lg) {
+            padding: 1rem 2em;
+          }
+          @media (--tablet) {
+            padding: 0;
+
+            &:hover::after {
+              content: "";
+              height: 3px;
+              width: 100%;
+              background-color: var(--bg-brown);
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: -5px;
+              border-radius: 2px;
+            }
+            &:hover {
+              background-color: transparent;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      & .header-navigation__item-download {
+        background-color: var(--bg-yellow);
+
+        &:hover {
+          background-color: var(--bg-yellow-dark);
+        }
+      }
+    }
+  }
+
+  /* button download cv */
+  & .btn-download {
+    font-size: var(--fs-sm);
+    padding: 0.8em 1.2em;
+
+    /* button download cv icon */
+    & .btn-download__icon {
+      height: 15px;
+      width: 15px;
+    }
+  }
+}
+
+/* animations */
+
+/* header */
+.header {
+  @media (--tablet) {
+    animation-name: animateHeader;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+/* header navigation  */
+.header-navigation {
+  & .header-navigation__list--animate {
+    animation-name: animateNavigationList;
+    animation-duration: 400ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+
+  & .header-navigation__list--animate-close {
+    animation-name: animateNavigationListClose;
+    animation-duration: 400ms;
+    animation-timing-function: linear;
+    animation-fill-mode: backwards;
+  }
+}
+@keyframes animateHeader {
+  50% {
+    transform: translateY(50%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animateNavigationList {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(50%);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animateNavigationListClose {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}

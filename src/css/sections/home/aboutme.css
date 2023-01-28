@@ -1,0 +1,39 @@
+.aboutme-section {
+  background-color: var(--bg-light-green);
+
+  /* about me title */
+  & .aboutme-title {
+    text-align: left;
+    z-index: 2;
+  }
+
+  /* about me details  */
+  & .aboutme-details {
+    width: 100%;
+    color: var(--text-light-gray);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-regular);
+    opacity: 0.7;
+    text-align: left;
+    z-index: 2;
+    @media (--laptop) {
+      max-width: 500px;
+    }
+    @media (--desktop) {
+      max-width: 600px;
+    }
+  }
+
+  /* about me image  */
+  & .aboutme-img__container {
+    width: 70%;
+    @media (--laptop) {
+      width: 40%;
+      opacity: 1;
+    }
+
+    & .aboutme-details__img {
+      height: 100%;
+    }
+  }
+}

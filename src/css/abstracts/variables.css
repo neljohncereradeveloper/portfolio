@@ -1,0 +1,57 @@
+:root {
+  --clr-primary-green-dark: hsl(194, 13%, 20%);
+  --clr-primary-green-light: hsl(184, 11%, 28%);
+
+  --clr-neutral-white: hsl(0, 0%, 100%);
+  --clr-neutral-gray-100: hsl(0, 0%, 93%);
+  --clr-neutral-gray-200: hsl(44, 21%, 83%);
+  --clr-neutral-gray-400: hsl(215, 14%, 26%);
+  --clr-neutral-gray-600: hsl(0, 0%, 40%);
+  --clr-neutral-gray-700: hsl(217, 10%, 25%);
+  --clr-neutral-gray-800: hsl(210, 5%, 17%);
+
+  --clr-accent-yellow: hsl(44, 60%, 50%);
+  --clr-accent-yellow-dark: hsl(44, 84%, 25%);
+  --clr-accent-brown: hsl(27, 28%, 50%);
+
+  --ff-poppins: "Poppins", sans-serif;
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --fs-xs: 0.625rem;
+  --fs-sm: 0.75rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-md-1: 1.5rem;
+  --fs-lg: 1.75rem;
+  --fs-xl: 2rem;
+  --fs-2xl: 3rem;
+  --fs-3xl: 5rem;
+  --fs-4xl: 10rem;
+
+  --text-white: var(--clr-neutral-white);
+  --text-brown: var(--clr-accent-brown);
+  --text-light-gray: var(--clr-neutral-gray-100);
+  --text-light-green: var(--clr-primary-green-light);
+  --text-dark-green: var(--clr-primary-green-dark);
+
+  --bg-light-green: var(--clr-primary-green-light);
+  --bg-dark-green: var(--clr-primary-green-dark);
+  --bg-white: var(--clr-neutral-white);
+  --bg-yellow: var(--clr-accent-yellow);
+  --bg-yellow-dark: var(--clr-accent-yellow-dark);
+  --bg-brown: var(--clr-accent-brown);
+  --bg-button: var(--clr-neutral-gray-700);
+  --bg-button-hover: hsl(210, 2%, 16%);
+  --bg-gray: var(--clr-neutral-gray-700);
+  --bg-gray-hover: var(--clr-neutral-gray-800);
+}
+
+@custom-media --mobile-md (min-width: 23.4375em);
+@custom-media --mobile-lg (min-width: 31.6875em);
+@custom-media --tablet (min-width: 40em);
+@custom-media --tablet-md (min-width: 47.625em);
+@custom-media --tablet-lg (min-width: 55.25em);
+@custom-media --laptop (min-width: 63em);
+@custom-media --desktop (min-width: 80em);

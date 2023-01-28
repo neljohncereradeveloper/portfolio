@@ -1,0 +1,22 @@
+.skills-section > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & .skills-image__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    flex-wrap: wrap;
+
+    @media (--tablet) {
+      gap: 2em;
+    }
+  }
+  & .skills-shapes {
+    display: flex;
+    gap: 1em;
+  }
+}

@@ -1,0 +1,52 @@
+/* variables */
+@import "abstracts/variables.css";
+
+/* base */
+@import "base/reset.css";
+
+/* components */
+@import "components/shared/titles.css";
+@import "components/shared/icons.css";
+@import "components/shared/container.css";
+@import "components/shared/button.css";
+@import "components/shared/image.css";
+@import "components/shared/scrolltoTop.css";
+
+/* layouts */
+@import "layouts/home/hero.css";
+@import "layouts/home/skills-whatido.css";
+@import "layouts/home/whatido.css";
+@import "layouts/home/skills.css";
+@import "layouts/home/projects.css";
+@import "layouts/home/certificates.css";
+@import "layouts/home/contact.css";
+@import "layouts/home/aboutme.css";
+@import "layouts/capstones-projects/main.css";
+@import "layouts/footer.css";
+@import "layouts/header.css";
+
+/* sections */
+@import "sections/home/hero.css";
+@import "sections/home/aboutme.css";
+@import "sections/home/skills-whatido.css";
+@import "sections/home/whatido.css";
+@import "sections/home/skills.css";
+@import "sections/home/projects.css";
+@import "sections/home/certificates.css";
+@import "sections/home/contact.css";
+@import "sections/footer/footer.css";
+@import "sections/header.css";
+@import "sections/capstones-projects/main.css";
+
+/* animations */
+@import "animations/keyframes.css";
+@import "animations/home/aboutme.css";
+@import "animations/home/whatido.css";
+@import "animations/home/hero.css";
+@import "animations/home/skills.css";
+@import "animations/home/certificates.css";
+@import "animations/home/contact.css";
+@import "animations/home/projects.css";
+
+/* utilities */
+@import "utilities/display.css";

@@ -1,0 +1,186 @@
+/* #region left to right animation */
+@keyframes animate-left-to-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* #endregion */
+
+/* #region left to right base 150% animation */
+@keyframes animate-left-to-right-base-150percent {
+  0% {
+    transform: translateX(-150%);
+  }
+  25% {
+    transform: translateX(-110%);
+  }
+  50% {
+    transform: translateX(-70%);
+  }
+  75% {
+    transform: translateX(-30%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* #endregion */
+
+/* #region right to left animation */
+@keyframes animate-right-to-left {
+  0% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* #endregion */
+
+/* #region  scale from 0 to 1 */
+@keyframes animate-scale {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(0.25);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  75% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* #endregion */
+
+/* #region  scale from left scale 0 to right scale 1 */
+@keyframes animate-scale-left-to-right {
+  0% {
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 500ms ease;
+  }
+  25% {
+    transform: scaleX(0.25);
+  }
+  50% {
+    transform: scaleX(0.5);
+  }
+  75% {
+    transform: scaleX(0.75);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+/* #endregion */
+
+/* #region  scale from left to right shrink origin right */
+@keyframes animate-scale-left-to-right-shrink {
+  100% {
+    transform-origin: right;
+    transform: scaleX(0);
+  }
+  75% {
+    transform: scaleX(0.25);
+  }
+  50% {
+    transform: scaleX(0.5);
+  }
+  25% {
+    transform: scaleX(0.75);
+  }
+  0% {
+    transform: scaleX(1);
+  }
+}
+/* #endregion */
+
+/* #region bottom to top animation */
+@keyframes animate-bottom-to-top {
+  0% {
+    transform: translateY(100%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* #endregion */
+
+/* #region bottom to top from 200%base animation */
+@keyframes animate-bottom-to-top-base-200percent {
+  0% {
+    transform: translateY(200%);
+  }
+  25% {
+    transform: translateY(150%);
+  }
+  50% {
+    transform: translateY(100%);
+  }
+  75% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* #endregion */
+
+/* #region opacity 0 to 0.1 animation */
+@keyframes animate-opacity-point-one {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+/* #endregion */
+
+/* #region opacity 0 to 0.7 animation */
+@keyframes animate-opacity-point-seven {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+/* #endregion */
+
+/* #region opacity 0 to 1 animation */
+@keyframes animate-opacity-one {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* #endregion */

@@ -1,0 +1,43 @@
+$clr-primary-green-dark: hsl(194, 13%, 20%);
+$clr-primary-green-light: hsl(184, 11%, 28%);
+$clr-neutral-white: hsl(0, 0%, 100%);
+$clr-neutral-gray-100: hsl(0, 0%, 93%);
+$clr-neutral-gray-200: hsl(44, 21%, 83%);
+$clr-neutral-gray-600: hsl(0, 0%, 40%);
+$clr-accent-yellow: hsl(44, 60%, 50%);
+$clr-accent-brown: hsl(27, 28%, 50%);
+
+$ff-poppins: "Poppins", sans-serif;
+$fw-regular: 400;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+$fs-base: 1.125rem;
+$fs-md: 1.5rem;
+$fs-lg: 1.75rem;
+$fs-xl: 2rem;
+$fs-2xl: 3rem;
+$fs-3xl: 4rem;
+
+:root {
+  --clr-primary-green-dark: #{$clr-primary-green-dark};
+  --clr-primary-green-light: #{$clr-primary-green-light};
+  --clr-neutral-white: #{$clr-neutral-white};
+  --clr-neutral-gray-100: #{$clr-neutral-gray-100};
+  --clr-neutral-gray-200: #{$clr-neutral-gray-200};
+  --clr-neutral-gray-600: #{$clr-neutral-gray-600};
+  --clr-accent-yellow: #{$clr-accent-yellow};
+  --clr-accent-brown: #{$clr-accent-brown};
+
+  --ff-poppins: #{$ff-poppins};
+  --fw-regular: #{$fw-regular};
+  --fw-semibold: #{$fw-semibold};
+  --fw-bold: #{$fw-bold};
+
+  --fs-base: #{$fs-base};
+  --fs-md: #{$fs-md};
+  --fs-lg: #{$fs-lg};
+  --fs-xl: #{$fs-xl};
+  --fs-2xl: #{$fs-2xl};
+  --fs-3xl: #{$fs-3xl};
+}

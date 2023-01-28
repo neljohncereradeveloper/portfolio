@@ -1,0 +1,7 @@
+.h-header {
+  height: 5rem;
+
+  @media (--br-min-lg) {
+    height: 6rem;
+  }
+}

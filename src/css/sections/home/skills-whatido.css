@@ -1,0 +1,43 @@
+.skills-whatido-section {
+  position: relative;
+
+  & .skills-whatido__container {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1;
+    opacity: 0.5;
+
+    & .skills-whatido__bg-img {
+      position: relative;
+      height: 60%;
+      width: 300px;
+
+      @media (--tablet) {
+        height: 60%;
+        width: 300px;
+      }
+
+      @media (--tablet-md) {
+        height: 70%;
+        width: 350px;
+      }
+
+      @media (--tablet-lg) {
+        height: 80%;
+        width: 400px;
+      }
+
+      @media (--laptop) {
+        height: 90%;
+      }
+
+      @media (--desktop) {
+        height: 100%;
+        width: 500px;
+      }
+    }
+  }
+}

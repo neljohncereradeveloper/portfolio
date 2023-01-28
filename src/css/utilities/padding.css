@@ -1,0 +1,7 @@
+.p-y-header {
+  padding-inline: 1.5em;
+
+  @media (--br-min-md) {
+    padding-inline: 0px;
+  }
+}

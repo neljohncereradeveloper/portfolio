@@ -1,0 +1,16 @@
+.bg-white {
+  background-color: var(--clr-neutral-100);
+}
+.bg-primary {
+  background-color: var(--bg-primary);
+}
+.bg-primary:hover {
+  background-color: var(--bg-primary-hover);
+}
+.bg-backdrop {
+  background-color: var(--bg-backdrop);
+  opacity: 0.75;
+}
+.bg-none {
+  background-color: transparent;
+}

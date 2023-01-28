@@ -1,0 +1,256 @@
+.certificates-section {
+  background-color: var(--bg-light-green);
+}
+
+/* main */
+.certificates-section > .container {
+  /* certificate-title */
+  & .certificate-title {
+    margin-block: auto;
+  }
+
+  /* certificate */
+  & .certificate {
+    /* certificate animations */
+    & .certificate-animation {
+      background-color: transparent;
+
+      /* certificate animation button open */
+      & .certificate-animation__btn-open {
+        background-color: transparent;
+        color: var(--text-white);
+        font-size: clamp(var(--fs-md), 3vw, var(--fs-lg));
+        font-weight: var(--fw-bold);
+        padding: 15px 35px;
+        border: 1px solid var(--bg-brown);
+        border-radius: 5px;
+        &:hover {
+          cursor: pointer;
+          box-shadow: 0 0 5px 5px var(--bg-brown);
+          transition: all 0.4s;
+        }
+      }
+
+      /* certificate animation left container */
+      & .certificate-animation__left {
+        background-color: var(--bg-dark-green);
+        border-right: 1px solid var(--bg-light-green);
+        padding-inline: 1.5em;
+
+        /* certificate animation left long line */
+        & .certificate-animation__left-line {
+          height: 0.1em;
+          background-color: var(--bg-white);
+          width: 100%;
+          opacity: 0.3;
+        }
+
+        /* certificate animation left short line */
+        & .certificate-animation__left-line--short {
+          height: 0.1em;
+          background-color: var(--bg-white);
+          width: 50%;
+          opacity: 0.3;
+        }
+      }
+
+      /* certificate animation right container */
+      & .certificate-animation__right {
+        background-color: var(--bg-dark-green);
+        width: 50%;
+
+        /* certificate animation right certified */
+        & .certificate-animation__right-certified {
+          background-color: var(--bg-dark-green);
+          font-size: var(--fs-sm);
+          font-weight: var(--fw-semibold);
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          text-align: center;
+          padding: 10px 25px;
+          border: 1px solid var(--bg-light-green);
+          border-top: 0;
+          @media (--mobile-lg) {
+            padding: 15px 35px;
+          }
+          @media (--tablet) {
+            padding: 20px 45px;
+          }
+          @media (--tablet-md) {
+            padding: 30px 55px;
+          }
+        }
+
+        /* certificate animation right ribbon */
+        & .certificate-animation__right-ribbon {
+          height: 80px;
+          width: 80px;
+          fill: var(--text-white);
+          opacity: 0.8;
+          @media (--mobile-lg) {
+            height: 110px;
+            width: 110px;
+          }
+          @media (--tablet) {
+            height: 130px;
+            width: 130px;
+          }
+        }
+      }
+    }
+
+    /* certificiate buttons */
+    & .certificate-buttons {
+      box-shadow: 10px 10px 10px 5px var(--bg-dark-green);
+      background-color: rgba(0, 0, 0, 0.6);
+
+      & .certificate-buttons__title {
+        text-align: center;
+        font-size: var(--fs-md);
+        font-weight: var(--fw-semibold);
+        text-transform: uppercase;
+        opacity: 0.8;
+      }
+
+      & > a {
+        background-color: var(--bg-yellow);
+        color: var(--text-white);
+        font-size: var(--fs-base);
+        font-weight: var(--fw-regular);
+        text-transform: uppercase;
+        border: none;
+        padding: 10px 35px;
+        border-radius: 5px;
+
+        &:hover {
+          cursor: pointer;
+          background-color: var(--bg-yellow-dark);
+          transition: all 0.4s;
+        }
+      }
+    }
+
+    & .certificate-img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  /* certificate-btn */
+  & .certificates-btn {
+    margin-inline: auto;
+
+    &:hover {
+      transition: all 0.4s;
+      box-shadow: 0 0 1px 3px var(--bg-yellow);
+    }
+  }
+}
+
+/* animations */
+.certificates-section > .container {
+  & .certificate {
+    & .certificate-animation--animate {
+      animation-name: animateCertificateAnimation;
+      animation-fill-mode: forwards;
+      animation-delay: 3s;
+    }
+
+    & .certificate-animation__btn-open--animate {
+      animation-name: animateCertificateButtonOpen;
+      animation-duration: 200ms;
+      animation-fill-mode: forwards;
+    }
+
+    & .certificate-animation__left--animate {
+      animation-name: animateCertificateLeft;
+      animation-duration: 1s;
+      animation-delay: 200ms;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+    }
+    & .certificate-animation__right--animate {
+      animation-name: animateCertificateRight;
+      animation-duration: 1s;
+      animation-delay: 200ms;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+    }
+
+    & .certificate-animation__right-certified--animate {
+      animation-name: animateCertificateCertified;
+      animation-duration: 400ms;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@keyframes animateCertificateAnimation {
+  0% {
+    display: flex;
+  }
+  100% {
+    display: none;
+    z-index: -1;
+  }
+}
+
+@keyframes animateCertificateButtonOpen {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+}
+
+@keyframes animateCertificateLeft {
+  0% {
+    width: 50%;
+    padding-inline: 1.5em;
+  }
+  50% {
+    width: 25%;
+    padding-inline: 0.7em;
+  }
+  100% {
+    width: 0;
+    padding-inline: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes animateCertificateRight {
+  0% {
+    width: 50%;
+    padding-inline: 1.5em;
+  }
+  50% {
+    width: 25%;
+    padding-inline: 0.7em;
+  }
+  100% {
+    width: 0;
+    padding-inline: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes animateCertificateCertified {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}

@@ -1,0 +1,101 @@
+.hero-section {
+  & .container {
+    @media (--tablet) {
+      padding-block: 4.4em;
+    }
+    @media (--tablet-md) {
+      padding-block: 4.8em;
+    }
+    @media (--tablet-lg) {
+      padding-block: 5.2em;
+    }
+    @media (--laptop) {
+      padding-block: 5.6em;
+    }
+  }
+}
+.hero-section > * {
+  /* hero section details */
+  & .hero-section__details {
+    margin-bottom: 2em;
+
+    /* hero section details title */
+    & .hero-title {
+      color: var(--clr-neutral-gray-400);
+      font-size: clamp(var(--fs-3xl), 14vw, var(--fs-4xl));
+      font-weight: var(--fw-bold);
+      letter-spacing: 10px;
+      line-height: 1;
+    }
+
+    /* hero section details subtitle */
+    & .hero-subtitle {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 40%;
+        height: 3px;
+        background-color: var(--clr-accent-brown);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--bg-dark-green);
+      }
+    }
+
+    /* hero section details role */
+    & .hero-detail__role {
+      color: var(--text-light-gray);
+      font-size: var(--fs-base);
+      font-weight: var(--fw-regular);
+    }
+  }
+
+  /* hero section socials */
+  & .hero-section__socials {
+    @media (--mobile-lg) {
+      height: 270px;
+    }
+    @media (--tablet) {
+      height: 300px;
+    }
+    @media (--tablet-md) {
+      height: 330px;
+    }
+    @media (--tablet-lg) {
+      height: 360px;
+    }
+
+    /* hero section socials title */
+    & .hero-social__title {
+      color: var(--text-light-gray);
+      font-size: var(--fs-sm);
+      font-weight: var(--fw-regular);
+      opacity: 0.8;
+      width: 70px;
+
+      @media (--mobile-lg) {
+        transform: rotate(90deg);
+      }
+    }
+    /* hero section socials line */
+    & .hero-social__line {
+      @media (--mobile-lg) {
+        display: block;
+        height: 100%;
+        width: 3px;
+        background-color: var(--clr-accent-brown);
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

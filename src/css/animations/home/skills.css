@@ -1,0 +1,28 @@
+/* animations */
+.skills-section {
+  /* skills title */
+  & .skills-section__title {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  & .skills-image__item {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  /* what i do title animation */
+  & .skills-section__title--animate {
+    animation: animate-scale 1.2s linear 200ms forwards,
+      animate-opacity-one 1.2s linear 200ms forwards;
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  & .skills-image__item--animate {
+    animation: animate-scale 1s linear 800ms forwards,
+      animate-opacity-one 1s linear 800ms forwards;
+    transform: scale(0);
+    opacity: 0;
+  }
+}

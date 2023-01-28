@@ -1,0 +1,26 @@
+.skills-section {
+  background-color: var(--bg-light-green);
+
+  & .skills-image__list {
+    margin-bottom: 4em;
+    z-index: 2;
+    & .skills-image__item {
+      box-shadow: 10px 10px 10px 5px var(--bg-dark-green);
+      border-radius: 20px;
+      & .img-container {
+        height: 100px;
+        width: 120px;
+      }
+    }
+  }
+
+  & .skills-shapes {
+    & .skills-shapes__circle {
+      height: 20px;
+      width: 20px;
+      border-radius: 100%;
+      background-color: var(--bg-dark-green);
+      box-shadow: 1px 1px 10px 1px var(--bg-dark-green);
+    }
+  }
+}
